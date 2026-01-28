@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./assets/style/output.css" rel="stylesheet" />
+    <title>Javascript Project - Personalized Message</title>
+  </head>
+  <body class="font-mono bg-primary">
+    <div class="flex flex-col md:flex-row">
+      <!-- Navbar -->
+      <nav
+        class="relative w-full text-white border-b-2 md:w-72 h-fit md:h-screen bg-secondary md:border-b-0 md:border-r-2 border-border"
+      >
+        <!-- Top bar with title and hamburger -->
+        <div
+          class="flex items-center justify-between p-4 md:flex-col md:items-start md:justify-start"
+        >
+          <!-- Left title -->
+          <a href="index.html" class="text-xl font-bold">Barth.dev</a>
+
+          <!-- Hamburger for mobile -->
+          <button id="burger" class="md:hidden">
+            <img
+              src="./assets/image/burger.svg"
+              alt="hamburger-menu"
+              class="w-6 h-6"
+              style="fill: white"
+            />
+          </button>
+        </div>
+
+        <!-- Nav links -->
+        <div
+          id="nav-links"
+          class="absolute left-0 z-10 flex flex-col invisible w-full md:visible bg-secondary md:flex md:relative md:top-0 md:w-full h-[30vh] md:h-full"
+        >
+          <a href="project1.html" class="p-4 text-left hover:bg-highlight"
+            >Message Maker</a
+          >
+          <a href="project2.html" class="p-4 text-left hover:bg-highlight"
+            >Counter Program</a
+          >
+          <a href="project3.html" class="p-4 text-left hover:bg-highlight"
+            >Basic Calculator</a
+          >
+          <a href="project4.html" class="p-4 text-left hover:bg-highlight"
+            >To-Do List</a
+          >
+          <a href="project5.html" class="p-4 text-left hover:bg-highlight"
+            >PIN Generator</a
+          >
+        </div>
+      </nav>
+
+      <!-- Main content -->
+      <main
+        class="flex flex-col items-center justify-center w-full h-screen p-5 text-white"
+      >
+        <!-- Container -->
+        <div
+          class="flex flex-col items-center justify-center h-full gap-5 p-5 text-center text-white"
+        >
+          <!-- User Input -->
+          <div class="flex flex-col lg:flex-row">
+            <div class="flex flex-col p-2 text-left">
+              <label class="mb-1">Your Full Name</label>
+              <input type="text" id="fullName" class="bg-secondary" required />
+            </div>
+
+            <div class="flex flex-col p-2 mr-6 text-left">
+              <label class="mb-1">Favorite Color</label>
+              <input
+                type="text"
+                id="favoriteColor"
+                class="bg-secondary"
+                required
+              />
+            </div>
+
+            <div class="flex flex-col p-2 text-left">
+              <label class="mb-1">Favorite Food</label>
+              <input
+                type="text"
+                id="favoriteFood"
+                class="bg-secondary"
+                required
+              />
+            </div>
+          </div>
+
+          <button
+            type="button"
+            id="submit"
+            class="p-4 rounded-lg bg-secondary hover:bg-highlight"
+          >
+            Create Message
+          </button>
+          <p id="output">Message Output</p>
+
+          <!-- Project Description -->
+          <div class="flex items-center justify-center p-4 mt-10 w-fit">
+            <p class="text-sm text-center text-gray-300 md:w-2/3">
+              This project is a Personalized Message application built using
+              HTML, Tailwind CSS, and JavaScript. Users can enter their name,
+              favorite color, and favorite food, then click "Create Message" to
+              generate a customized greeting displayed on the page. It
+              demonstrates working with user input, DOM manipulation, and
+              dynamic text updates in JavaScript.
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+
+  <script src="./assets/js/nav.js"></script>
+  <script src="./assets/js/project1.js"></script>
+</html>

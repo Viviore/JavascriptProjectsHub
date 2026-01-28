@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./assets/style/output.css" rel="stylesheet" />
+    <title>Javascript Project - Basic Calculator</title>
+  </head>
+  <body class="font-mono bg-primary">
+    <div class="flex flex-col md:flex-row">
+          <!-- Navbar -->
+      <nav
+        class="relative w-full text-white border-b-2 md:w-72 h-fit md:h-screen bg-secondary md:border-b-0 md:border-r-2 border-border"
+      >
+        <!-- Top bar with title and hamburger -->
+        <div
+          class="flex items-center justify-between p-4 md:flex-col md:items-start md:justify-start"
+        >
+          <!-- Left title -->
+          <a href="index.html" class="text-xl font-bold">Barth.dev</a>
+
+          <!-- Hamburger for mobile -->
+          <button id="burger" class="md:hidden">
+            <img
+              src="./assets/image/burger.svg"
+              alt="hamburger-menu"
+              class="w-6 h-6"
+              style="fill: white"
+            />
+          </button>
+        </div>
+
+        <!-- Nav links -->
+        <div
+          id="nav-links"
+          class="absolute left-0 z-10 flex flex-col invisible w-full md:visible bg-secondary md:flex md:relative md:top-0 md:w-full h-[30vh] md:h-full"
+        >
+          <a href="project1.html" class="p-4 text-left hover:bg-highlight"
+            >Message Maker</a
+          >
+          <a href="project2.html" class="p-4 text-left hover:bg-highlight"
+            >Counter Program</a
+          >
+          <a href="project3.html" class="p-4 text-left hover:bg-highlight"
+            >Basic Calculator</a
+          >
+          <a href="project4.html" class="p-4 text-left hover:bg-highlight"
+            >To-Do List</a
+          >
+          <a href="project5.html" class="p-4 text-left hover:bg-highlight"
+            >PIN Generator</a
+          >
+        </div>
+      </nav>
+
+      <!-- Main content -->
+      <main
+        class="flex flex-col items-center justify-center w-full h-screen p-5 text-white"
+      >
+        <!-- Container -->
+        <div
+          class="flex flex-col items-center justify-center gap-5 p-5 text-center text-white h-fit "
+        >
+        <!-- Buttons -->
+          <div id="keys" class="grid grid-cols-4 w-fit">
+            <input id="display" class="h-10 mb-10 bg-secondary"  placeholder="Output Here" readonly/>
+            <div class="mb-10">
+              <button
+                onclick="appendToDisplay('+')"
+                class="w-10 h-10 text-lg text-white cursor-pointer bg-secondary"
+              >
+                +
+              </button>
+              <button
+                onclick="appendToDisplay('7')"
+                class="w-10 h-10 text-lg text-white cursor-pointer bg-secondary"
+              >
+                7
+              </button>
+              <button
+                onclick="appendToDisplay('8')"
+                class="w-10 h-10 text-lg text-white cursor-pointer bg-secondary"
+              >
+                8
+              </button>
+              <button
+                onclick="appendToDisplay('9')"
+                class="w-10 h-10 text-lg text-white cursor-pointer bg-secondary"
+              >
+                9
+              </button>
+            </div>
+            <div class="mb-10">
+              <button
+                onclick="appendToDisplay('-')"
+                class="w-10 h-10 text-lg text-white cursor-pointer bg-secondary"
+              >
+                -
+              </button>
+              <button
+                onclick="appendToDisplay('4')"
+                class="w-10 h-10 text-lg text-white cursor-pointer bg-secondary"
+              >
+                4
+              </button>
+              <button
+                onclick="appendToDisplay('5')"
+                class="w-10 h-10 text-lg text-white cursor-pointer bg-secondary"
+              >
+                5
+              </button>
+              <button
+                onclick="appendToDisplay('6')"
+                class="w-10 h-10 text-lg text-white cursor-pointer bg-secondary"
+              >
+                6
+              </button>
+            </div>
+            <div class="mb-10">
+              <button
+                onclick="appendToDisplay('*')"
+                class="w-10 h-10 text-lg text-white cursor-pointer bg-secondary"
+              >
+                *
+              </button>
+              <button
+                onclick="appendToDisplay('1')"
+                class="w-10 h-10 text-lg text-white cursor-pointer bg-secondary"
+              >
+                1
+              </button>
+              <button
+                onclick="appendToDisplay('2')"
+                class="w-10 h-10 text-lg text-white cursor-pointer bg-secondary"
+              >
+                2
+              </button>
+              <button
+                onclick="appendToDisplay('3')"
+                class="w-10 h-10 text-lg text-white cursor-pointer bg-secondary"
+              >
+                3
+              </button>
+            </div>
+         <div class="mb-10">
+            <button
+              onclick="appendToDisplay('/')"
+              class="w-10 h-10 text-lg text-white cursor-pointer bg-secondary"
+            >
+              /
+            </button>
+            <button
+              onclick="appendToDisplay('0')"
+              class="w-10 h-10 text-lg text-white cursor-pointer bg-secondary"
+            >
+              0
+            </button>
+            <button
+              onclick="appendToDisplay('.')"
+              class="w-10 h-10 text-lg text-white cursor-pointer bg-secondary"
+            >
+              .
+            </button>
+            <button
+              onclick="calculate()"
+              class="w-10 h-10 text-lg text-white cursor-pointer bg-secondary"
+            >
+              =
+            </button>
+            </div>
+              <button
+                onclick="clearDisplay()"
+                class="w-full h-10 text-lg text-white cursor-pointer bg-secondary"
+              >
+                C
+              </button>
+            </div>
+          </div>
+
+          <!-- Project Description -->
+          <div class="flex items-center justify-center p-4 w-fit">
+              <p class="text-sm text-center text-gray-300 md:w-2/3">
+                This project is a functional calculator application built using HTML,
+                Tailwind CSS, and JavaScript. It allows users to perform basic arithmetic
+                operations (addition, subtraction, multiplication, and division) with
+                input validation to prevent errors like multiple operators or decimals,
+                demonstrating DOM manipulation, event handling, and JavaScript logic.
+              </p>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+
+    <script src="./assets/js/nav.js"></script>
+    <script src="./assets/js/project3.js"></script>
+</html>
